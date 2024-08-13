@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>registerasi</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(to right, #b3ff00, #e555ff);
+        background-size: 300%;
+        animation: gradient 10s infinite alternate;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container{
+        width: 40%;
+        height: 70%;
+        
+      }
+      fieldset{
+        background-color: #f0ffff;
+      }
+      legend{
+        background-color: #0c78c5;
+        padding: 16px 48px;
+        border-radius: 100px;
+        color: white;
+        margin-left: 50px;
+        margin-bottom: 40px;
+      }
+      .form-grup{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+        box-sizing: border-box;
+      }
+      input,label{
+        padding: 16px;
+      }
+
+      /* animasi gradient */
+
+      @keyframes gradient {
+        0%{
+            background-position: center;
+
+        }25%{
+            background-position: right;
+            background-size: 250%;
+        }
+        50%{
+            background-position: left;
+            background-size: 350%;
+
+        }75%{
+            background-position: center;
+            background-size: 200%;
+
+
+        }100%{
+            background-position: top;
+            
+
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <fieldset>
+            <legend>login form</legend>
+
+            <!-- login form -->
+             <form action="#" method="post">
+                <div class="form-grup">
+                    <label>nama lengkap</label>
+                    <input required type="nama lengkap">
+                </div>
+                <div class="form-grup">
+                    <label>username</label>
+                    <input required type="username">
+                </div>
+                <div class="form-grup">
+                    <label>email</label>
+                    <input required type="email">
+                </div>
+                <div class="form-grup">
+                    <label>password</label>
+                    <input required type="password">
+                </div>
+             </form>
+        </fieldset>
+    </div>
+  </body>
+</html>
