@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Request</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(to right, #fcfcfc, rgb(17, 0, 255));
+            background-size: 300%;
+            animation: gradient 10s infinite alternate;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 40%;
+        }
+
+        fieldset {
+            background-color: #f0ffff;
+            border: none;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 4px 8px 36px rgb(17, 189, 212);
+        }
+
+        legend {
+            background-color: #14cec5;
+            padding: 16px 48px;
+            border-radius: 100px;
+            color: #fff;
+            margin-left: 50px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0040ff;
+            margin-bottom: 24px;
+        }
+
+        .form-grup {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 16px;
+        }
+
+        label {
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .checkbox-group,
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .btn-login {
+            background-color: #0c78c5;
+            border: none;
+            border-radius: 16px;
+            color: #f0ffff;
+            padding: 16px 0;
+            margin-top: 16px;
+            width: 100%;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: 700;
+            transition: background-color 0.5s;
+        }
+
+        .btn-login:hover {
+            background-color: #0b6ef9;
+        }
+
+        /* Animation gradient */
+        @keyframes gradient {
+            0% { background-position: center; }
+            25% { background-position: right; background-size: 250%; }
+            50% { background-position: left; background-size: 350%; }
+            75% { background-position: center; background-size: 200%; }
+            100% { background-position: top; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <fieldset>
+            <h1>Software Request</h1>
+            <form action="#" method="post">
+                <div class="form-grup">
+                    <label for="name">Name*</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-grup">
+                    <label for="employee">Employee ID*</label>
+                    <input type="text" id="employee" name="employee" required>
+                </div>
+                <div class="form-grup">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-grup">
+                    <label for="phone">Mobile No/Extn. No</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-grup">
+                    <label>Which software do you require</label>
+                    <div class="checkbox-group">
+                        <div>
+                            <input id="checkbox1" type="checkbox" name="software" value="Software A">
+                            <label for="checkbox1">Software A</label>
+                        </div>
+                        <div>
+                            <input id="checkbox2" type="checkbox" name="software" value="Software B">
+                            <label for="checkbox2">Software B</label>
+                        </div>
+                        <div>
+                            <input id="checkbox3" type="checkbox" name="software" value="Software C">
+                            <label for="checkbox3">Software C</label>
+                        </div>
+                        <div>
+                            <input id="checkbox4" type="checkbox" name="software" value="Software D">
+                            <label for="checkbox4">Software D</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-grup">
+                    <label>How urgently do you need it</label>
+                    <div class="radio-group">
+                        <div>
+                            <input id="radio1" type="radio" name="urgency" value="As soon as possible" required>
+                            <label for="radio1">As soon as possible</label>
+                        </div>
+                        <div>
+                            <input id="radio2" type="radio" name="urgency" value="Within 2 to 3 weeks">
+                            <label for="radio2">Within 2 to 3 weeks</label>
+                        </div>
+                        <div>
+                            <input id="radio3" type="radio" name="urgency" value="I'm not in a hurry">
+                            <label for="radio3">I'm not in a hurry</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-grup">
+                    <button type="submit" class="btn-login">Request</button>
+                </div>
+            </form>
+        </fieldset>
+    </div>
+</body>
+</html>
